@@ -3,117 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHTORIALS | THE BUILD BOX</title>
+    <title>TECHTORIALS | BUILD BOX SHOP</title>
     <style>
-        :root {
-            --ind-orange: #FF6B00;
-            --bg-dark: #080808;
-            --card-gray: #121212;
-            --box-tan: #d2b48c;
-        }
-
+        /* This section forces the site to NOT be just a black void */
         body {
-            background-color: var(--bg-dark);
-            color: #ffffff;
+            background-color: #0a0a0a; /* Dark gray, not pure black */
+            color: white;
             font-family: 'Arial Black', sans-serif;
             margin: 0;
             padding: 0;
+            display: block; /* Ensures content isn't hidden */
         }
 
-        /* Top Shipping Ticker */
-        .ticker {
-            background: var(--ind-orange);
-            color: black;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            border-bottom: 2px solid black;
-        }
-
-        /* The Stacked Industrial Logo */
         header {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            background: radial-gradient(circle, #1a1a1a 0%, #080808 100%);
-            border-bottom: 4px solid #222;
+            border-bottom: 2px solid #222;
         }
 
-        .logo-badge {
+        /* The Stacked Logo */
+        .logo-box {
             display: inline-block;
-            border: 5px solid var(--ind-orange);
+            border: 5px solid #FF6B00; /* Industrial Orange */
             padding: 20px 40px;
             background: #000;
-            transform: skewX(-4deg);
-            text-align: left;
         }
 
-        .tech-top {
-            font-size: 4.5rem;
-            color: var(--ind-orange);
-            line-height: 0.8;
+        .t-top {
+            font-size: 4rem;
+            color: #FF6B00;
             margin: 0;
+            line-height: 0.9;
         }
 
-        .tor-bottom {
-            font-size: 4.5rem;
-            color: #fff;
-            line-height: 0.8;
+        .t-bottom {
+            font-size: 4rem;
+            color: #ffffff;
             margin: 0;
+            line-height: 0.9;
         }
 
-        .logo-sub {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 15px;
-            letter-spacing: 6px;
-        }
-
-        /* Product Grid */
-        .shop-container {
-            max-width: 1200px;
-            margin: 50px auto;
+        /* The Product Grid */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             padding: 20px;
         }
 
-        .kit-card {
-            background: var(--card-gray);
-            border: 2px solid #222;
-            border-radius: 5px;
-            transition: 0.3s;
-            position: relative;
+        .box-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 30px;
+            text-align: center;
         }
 
-        .kit-card:hover {
-            border-color: var(--ind-orange);
-            transform: translateY(-5px);
+        .box-card h2 {
+            color: #FF6B00;
+            margin-top: 0;
         }
 
-        /* Physical Box Visual */
-        .box-preview {
-            height: 250px;
-            background-color: var(--box-tan);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            border-bottom: 2px solid #222;
-            position: relative;
+        .btn {
+            display: inline-block;
+            background: #FF6B00;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
-        .box-preview::after {
-            content: 'TECHTORIALS_SHIPPING_UNIT';
-            position: absolute;
-            bottom: 10px;
-            font-size: 0.7rem;
-            color: rgba(0,0,0,0.3);
-            font-family: 'Courier New', monospace;
+        .btn:hover {
+            background: white;
         }
+    </style>
+</head>
+<body>
 
-        .kit-content {
-            padding: 30
+    <header>
+        <div class="logo-box">
+            <h1 class="t-top">TECH</h1>
+            <h1 class="t-bottom">TORIALS</h1>
+        </div>
+        <p style="color: #666; font-family: monospace; margin-top: 15px;">> PHYSICAL BUILD KITS READY FOR DISPATCH</p>
+    </header>
+
+    <div class="container">
+        <div class="box-card">
+            <h2>KIT_01: SCREEN</h2>
+            <p>Complete display repair unit.</p>
+            <a href="#" class="btn">ORDER BOX</a>
+        </div>
+
+        <div class="box-card">
+            <h2>KIT_02: POWER</h2>
+            <p>High-capacity battery swap.</p>
+            <a href="#" class="btn">ORDER BOX</a>
+        </div>
+    </div>
+
+    <p style="text-align: center; color: #444; font-size: 0.8rem;">
+        <a href="https://jettanddanieltech.github.io" style="color: #444;">← BACK TO MAIN SITE</a>
+    </p>
+
+</body>
+</html>
