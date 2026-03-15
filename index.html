@@ -3,110 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHTORIALS | BUILD BOX SHOP</title>
+    <title>TECHTORIALS | THE FULL LINEUP</title>
     <style>
-        /* This section forces the site to NOT be just a black void */
+        :root {
+            --ind-orange: #FF6B00;
+            --bg-black: #080808;
+            --card-bg: #111111;
+        }
+
         body {
-            background-color: #0a0a0a; /* Dark gray, not pure black */
-            color: white;
+            background-color: var(--bg-black);
+            color: #ffffff;
             font-family: 'Arial Black', sans-serif;
             margin: 0;
             padding: 0;
-            display: block; /* Ensures content isn't hidden */
         }
 
-        header {
-            padding: 80px 20px;
+        /* Industrial Ticker */
+        .ticker {
+            background: var(--ind-orange);
+            color: black;
+            padding: 12px;
             text-align: center;
-            border-bottom: 2px solid #222;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: bold;
         }
 
-        /* The Stacked Logo */
-        .logo-box {
+        /* Stacked Logo Header */
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #222;
+        }
+
+        .logo-badge {
             display: inline-block;
-            border: 5px solid #FF6B00; /* Industrial Orange */
+            border: 5px solid var(--ind-orange);
             padding: 20px 40px;
             background: #000;
+            text-align: left;
         }
 
-        .t-top {
-            font-size: 4rem;
-            color: #FF6B00;
-            margin: 0;
-            line-height: 0.9;
-        }
+        .t-top { font-size: 4rem; color: var(--ind-orange); margin: 0; line-height: 0.8; }
+        .t-bottom { font-size: 4rem; color: #fff; margin: 0; line-height: 0.8; }
 
-        .t-bottom {
-            font-size: 4rem;
-            color: #ffffff;
-            margin: 0;
-            line-height: 0.9;
-        }
-
-        /* The Product Grid */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
+        /* The Grid - Now expanded for many kits */
+        .shop-grid {
+            max-width: 1200px;
+            margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 30px;
             padding: 20px;
         }
 
-        .box-card {
-            background: #1a1a1a;
-            border: 1px solid #333;
+        .kit-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
             padding: 30px;
-            text-align: center;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .box-card h2 {
-            color: #FF6B00;
-            margin-top: 0;
+        .kit-card:hover {
+            border-color: var(--ind-orange);
+            transform: translateY(-5px);
         }
+
+        .kit-num { color: #444; font-family: monospace; font-size: 0.8rem; }
+        .kit-name { color: var(--ind-orange); font-size: 1.5rem; margin: 10px 0; }
+        .kit-desc { color: #888; font-family: 'Arial', sans-serif; font-size: 0.9rem; margin-bottom: 20px; }
 
         .btn {
-            display: inline-block;
-            background: #FF6B00;
+            background: var(--ind-orange);
             color: black;
-            padding: 10px 20px;
+            padding: 12px;
             text-decoration: none;
+            text-align: center;
             font-weight: bold;
-            margin-top: 20px;
+            font-size: 0.9rem;
         }
 
-        .btn:hover {
-            background: white;
+        .btn:hover { background: #fff; }
+
+        .footer-link {
+            text-align: center;
+            padding: 50px;
         }
+        .footer-link a { color: #444; text-decoration: none; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
+    <div class="ticker">>> FACTORY STATUS: OPERATIONAL // ALL KITS IN STOCK // SHIPS WORLDWIDE <<</div>
+
     <header>
-        <div class="logo-box">
+        <div class="logo-badge">
             <h1 class="t-top">TECH</h1>
             <h1 class="t-bottom">TORIALS</h1>
         </div>
-        <p style="color: #666; font-family: monospace; margin-top: 15px;">> PHYSICAL BUILD KITS READY FOR DISPATCH</p>
     </header>
 
-    <div class="container">
-        <div class="box-card">
-            <h2>KIT_01: SCREEN</h2>
-            <p>Complete display repair unit.</p>
-            <a href="#" class="btn">ORDER BOX</a>
+    <div class="shop-grid">
+        
+        <div class="kit-card">
+            <span class="kit-num">UNIT_01</span>
+            <h2 class="kit-name">SCREEN SURGEON</h2>
+            <p class="kit-desc">Full OLED/LCD replacement kit with precision drivers and factory sealant.</p>
+            <a href="#" class="btn">GET BOX - $49.99</a>
         </div>
 
-        <div class="box-card">
-            <h2>KIT_02: POWER</h2>
-            <p>High-capacity battery swap.</p>
-            <a href="#" class="btn">ORDER BOX</a>
+        <div class="kit-card">
+            <span class="kit-num">UNIT_02</span>
+            <h2 class="kit-name">POWER CORE</h2>
+            <p class="kit-desc">High-capacity battery cell + safety tools and adhesive pull-tabs.</p>
+            <a href="#" class="btn">GET BOX - $29.99</a>
         </div>
+
+        <div class="kit-card">
+            <span class="kit-num">UNIT_03</span>
+            <h2 class="kit-name">THERMAL MASTER</h2>
+            <p class="kit-desc">Arctic thermal compound and cleaning kit to fix loud fans and overheating.</p>
+            <a href="#" class="btn">GET BOX - $19.99</a>
+        </div>
+
+        <div class="kit-card">
+            <span class="kit-num">UNIT_04</span>
+            <h2 class="kit-name">PORT RESTORE</h2>
+            <p class="kit-desc">Fix charging issues. Includes a new charging port assembly and micro-tools.</p>
+            <a href="#" class="btn">GET BOX - $24.99</a>
+        </div>
+
+        <div class="kit-card">
+            <span class="kit-num">UNIT_05</span>
+            <h2 class="kit-name">JOY-FIX PRO</h2>
+            <p class="kit-desc">The ultimate kit to fix stick drift on controllers. Includes 2 replacement joysticks.</p>
+            <a href="#" class="btn">GET BOX - $15.99</a>
+        </div>
+
+        <div class="kit-card">
+            <span class="kit-num">UNIT_06</span>
+            <h2 class="kit-name">DATA RESCUE</h2>
+            <p class="kit-desc">USB-to-SATA adapters and recovery software to pull files from dead laptops.</p>
+            <a href="#" class="btn">GET BOX - $34.99</a>
+        </div>
+
     </div>
 
-    <p style="text-align: center; color: #444; font-size: 0.8rem;">
-        <a href="https://jettanddanieltech.github.io" style="color: #444;">← BACK TO MAIN SITE</a>
-    </p>
+    <div class="footer-link">
+        <a href="https://jettanddanieltech.github.io">← RETURN TO J&D CORE</a>
+    </div>
 
 </body>
 </html>
